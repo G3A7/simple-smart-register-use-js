@@ -40,7 +40,7 @@ login.addEventListener("click", () => {
     });
     if (validUser) {
       if (validUser.pass == objData.pass) {
-        location.assign("home.html");
+        location.assign("./home.html");
       } else {
         pass.classList.add("is-invalid");
         Swal.fire({

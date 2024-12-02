@@ -49,7 +49,7 @@ sign.addEventListener("click", () => {
     };
     arrLogin.push(objData);
     localStorage.setItem("userLogin", JSON.stringify(arrLogin));
-    location.assign("index.html");
+    location.assign("./index.html");
   } else {
     Swal.fire({
       html: `<div class="box">
