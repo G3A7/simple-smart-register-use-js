@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="mt-5 w-75 mx-auto">
+      <div class="container">
+        <h2 class="text-center mb-3">Smart Login System</h2>
+        <div class="row g-4">
+          <div class="col-md-4 offset-md-4">
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              placeholder="Email"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-4 offset-md-4">
+            <div class="input-pass position-relative">
+              <input
+                id="pass"
+                type="password"
+                placeholder="Password.."
+                placeholder="Email"
+                class="form-control"
+              />
+              <div class="icon position-absolute">
+                <i id="eye" class="fa-regular d-block  fa-eye"></i>
+                <i id="eye-slash" class="fa-regular d-none fa-eye-slash"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 offset-md-4">
+            <button id="login" class="btn btn-primary w-100">Login</button>
+          </div>
+          <p class="text-center">Don't Have an Account? <a href="/signup.html">Sign Up</a></p>
+        </div>
+      </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
