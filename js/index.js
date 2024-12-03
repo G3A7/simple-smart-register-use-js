@@ -10,7 +10,11 @@ const regex = {
   email: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/,
   pass: /^.{6,10}$/,
 };
+// console.log(localStorage.getItem("userLogin"))
 let arrLogin = JSON.parse(localStorage.getItem("userLogin"));
+if (!localStorage.getItem("userLogin")) {
+  arrLogin = [];
+}
 eye.addEventListener("click", (e) => {
   pass.setAttribute("type", "text");
   eyeSlash.classList.replace("d-none", "d-block");
@@ -31,7 +35,7 @@ inputs.forEach((e) => {
 login.addEventListener("click", () => {
   if (CheckValidation()) {
     let objData = {
-      name: name.value,
+      // name: name.value,
       email: email.value,
       pass: pass.value,
     };
@@ -41,6 +45,7 @@ login.addEventListener("click", () => {
     const Index = arrLogin.findIndex((e) => {
       return e.email == objData.email;
     });
+    console.log(validUser)
     if (validUser) {
       if (validUser.pass == objData.pass) {
         location.assign(`./home.html?idx=${Index}`);
