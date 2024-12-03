@@ -6,7 +6,9 @@ const eye = document.getElementById("eye");
 const eyeSlash = document.getElementById("eye-slash");
 const inputs = document.querySelectorAll(".col-md-4 input");
 // console.log(inputs)
-let arrLogin = [];
+let arrLogin = localStorage.getItem("userLogin")
+  ? JSON.parse(localStorage.getItem("userLogin"))
+  : [];
 inputs.forEach((e) => {
   e.addEventListener("input", (e) => {
     validationsInput(e.target);

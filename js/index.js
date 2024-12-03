@@ -38,9 +38,12 @@ login.addEventListener("click", () => {
     const validUser = arrLogin.find((e) => {
       return e.email == objData.email;
     });
+    const Index = arrLogin.findIndex((e) => {
+      return e.email == objData.email;
+    });
     if (validUser) {
       if (validUser.pass == objData.pass) {
-        location.assign("./home.html");
+        location.assign(`./home.html?idx=${Index}`);
       } else {
         pass.classList.add("is-invalid");
         Swal.fire({
