@@ -42,13 +42,13 @@ login.addEventListener("click", () => {
     const validUser = arrLogin.find((e) => {
       return e.email == objData.email;
     });
-    const Index = arrLogin.findIndex((e) => {
-      return e.email == objData.email;
-    });
-    console.log(validUser)
+    // const Index = arrLogin.findIndex((e) => {
+    //   return e.email == objData.email;
+    // });
+    console.log(validUser);
     if (validUser) {
       if (validUser.pass == objData.pass) {
-        location.assign(`./home.html?idx=${Index}`);
+        location.assign(`./home.html?idx=${validUser.id}`);
       } else {
         pass.classList.add("is-invalid");
         Swal.fire({

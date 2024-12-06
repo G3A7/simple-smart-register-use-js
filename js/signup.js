@@ -45,6 +45,7 @@ function validationsInput(el) {
 sign.addEventListener("click", () => {
   if (CheckValidation()) {
     let objData = {
+      id: Date.now(),
       name: name.value,
       email: email.value,
       pass: pass.value,

@@ -6,6 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <script>
+const validUser = JSON.parse(localStorage.getItem("userLogin")).find((e) => {
+  return e.id == location.search.split("=")[1];
+});
+// console.log(validUser);
+if (!validUser) {
+  location.assign("./index.html");
+}
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
