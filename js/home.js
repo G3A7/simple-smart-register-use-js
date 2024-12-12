@@ -23,8 +23,16 @@ logout.addEventListener("click", (e) => {
   location.assign("./index.html");
 });
 // location.console.log();
+let x;
+// localStorage.getItem("userLogin")
+// console.log(localStorage.getItem("userLogin"))
+if (!localStorage.getItem("userLogin")) {
+  location.assign("./index.html");
+} else {
+  x = JSON.parse(localStorage.getItem("userLogin"));
+}
 document.getElementById("h1").innerHTML = `<span>Welcome :</span> ${
-  JSON.parse(localStorage.getItem("userLogin")).find((e, idx) => {
+  x.find((e, idx) => {
     return e.id == location.search.split("=")[1];
   }).name
 }`;
