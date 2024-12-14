@@ -22,6 +22,16 @@ const logout = document.getElementById("logout");
 logout.addEventListener("click", (e) => {
   location.assign("./index.html");
 });
+let user = "";
+if (JSON.parse(localStorage.getItem("userLogin"))) {
+  user = JSON.parse(localStorage.getItem("userLogin")).find((e, idx) => {
+    return e.id == location.search.split("=")[1];
+  });
+}
+
+if (!user) {
+  location.assign("../index.html");
+}
 // location.console.log();
 document.getElementById("h1").innerHTML = `<span>Welcome :</span> ${
   JSON.parse(localStorage.getItem("userLogin")).find((e, idx) => {
