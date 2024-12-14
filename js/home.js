@@ -30,7 +30,7 @@ if (JSON.parse(localStorage.getItem("userLogin"))) {
 }
 
 if (!user) {
-  location.assign("../index.html");
+  location.assign("./index.html");
 }
 // location.console.log();
 document.getElementById("h1").innerHTML = `<span>Welcome :</span> ${
